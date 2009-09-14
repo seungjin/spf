@@ -1,8 +1,8 @@
 <?php
 
-print_r($_SERVER['SCRIPT_FILENAME']);
-print("<br/>");
-print_r($_SERVER['REQUEST_URI']);
+$fileRootPath = $_SERVER['SCRIPT_FILENAME';]
+$uri = $_SERVER['REQUEST_URI'];
+
 
 
 ?>

@@ -1,0 +1,20 @@
+simple php frame; as much as simpler
+
+
+Structure:
+	|
+	+ README
+	|
+	+ library
+	|
+	+ modules
+	|	|
+	|	+ sample
+	|	|
+	|	+ spf
+	|
+	+ webroot
+		|
+		+ .htaccess
+		|
+		+ index.php
