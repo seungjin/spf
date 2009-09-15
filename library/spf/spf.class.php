@@ -1,16 +1,17 @@
 <?php
-
-require_once('/Applications/MAMP/htdocs/spf/modules/sample/bin/sample.php');
 		
 class Spf {
 
-	public function we($module,$run,$param_array){
-	
-	
-		$r = new sample;
-		echo $r->a();
+	public function load($library,$controller,$action,$argv){
 		
+		require_once(FRAME_PATH.'/library/'.$library.'/'.$controller.'.php');
 		
+		try {
+			$r = new $controller;
+		} catch (Exception $e) {
+			echo "e";
+		};
+		echo $r->$action($argv);
 		
 	}
 	
