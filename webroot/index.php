@@ -4,7 +4,7 @@ define("FRAME_PATH",substr($_SERVER['SCRIPT_FILENAME'],0,-17));
 
 date_default_timezone_set('America/Phoenix');
 
-require_once(FRAME_PATH.'/library/spf/spf.class.php');
+require_once(FRAME_PATH.'/library/spf/Spf.php');
 
 $fileRootPath = $_SERVER['SCRIPT_FILENAME'];
 $this_uri = $_SERVER['PHP_SELF'];
@@ -47,6 +47,11 @@ switch ($returnCode) {
 }
 
 $spf = new Spf();
-$spf->load(array_shift($url),array_shift($url),array_shift($url),$url);
+	$spf->LIBRARY = array_shift($url);
+	$spf->CONTROLLER = array_shift($url);
+	$spf->ACTION = array_shift($url);
+	$spf->REQUEST = $url;
+	$spf->URL = $_POST;
+	$spf->load();
 
 ?>

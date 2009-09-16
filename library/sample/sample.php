@@ -1,11 +1,18 @@
 <?php
 
-class sample {
+require_once(FRAME_PATH.'library/spf/aa.class.php');
 
-	function a($argv) {
-	
-		return(implode(',',$argv));	
-	}	
+class sample extends aa {
+
+	public function __construct() {
+		print("23");
+		//print($p);
+	}
+
+	public function a(){
+		print("123123");
+		print($this->p);
+	}
 	
 }
 
